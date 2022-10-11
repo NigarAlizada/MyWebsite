@@ -1,40 +1,5 @@
-//! Variables CSS
-$mainColor: #6500ff;
-$whiteColor: #ffffff;
-$textColor: #484848;
-$grayColor: #888888;
-$invertMainColor: #9855ff;
-$invertTextColor: #ffffff;
-$invertBgColor: #283137;
+@import 'helper.scss';
 
-//! Main Style
-* {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-}
-
-a,
-a:visited,
-a:hover {
-  text-decoration: none;
-}
-
-ul {
-  list-style: none;
-}
-
-button {
-  cursor: pointer;
-}
-
-body {
-  overflow-x: hidden;
-  min-height: 100vh;
-  font-family: "Montserrat", sans-serif;
-  background-color: $whiteColor;
-  transition: 0.3s;
-}
 
 //! Header
 .header {
@@ -169,6 +134,10 @@ body {
         color: $grayColor;
         font-size: 24px;
         margin-bottom: 25px;
+
+        a {
+          color: $mainColor;
+        }
       }
 
       .intro_text {
@@ -247,12 +216,25 @@ body {
         border-radius: 50%;
       }
     }
+    .about_img {
+      max-width: 500px;
+      width: 100%;
+
+      .img {
+        display: block;
+        width: 100%;
+       
+      }
+    }
   }
 }
 
 //! Dark Mode
 body.is_black {
   background: $invertBgColor;
+  footer {
+    color: $whiteColor;
+  }
 }
 
 .is_black .header {
@@ -336,6 +318,7 @@ body.is_black {
   }
 }
 
+
 //! Media Queries
 
 @media (max-width: 1023px) {
@@ -362,8 +345,9 @@ body.is_black {
     }
   }
   .main_container { 
-    margin: 0 20px;
+    /* margin: 0 20px; */
     .intro_body {
+      padding: 30px 10px;
       .intro_content {
         .intro_title {
           font-size: 42px;
@@ -483,12 +467,14 @@ body.is_black {
   }
 
   .main_container { 
-    margin: 0 20px;
+   /*  margin: 0 20px; */
     .intro_body {
       min-height: calc(100vh - 69px);
       flex-direction: column-reverse;
+      justify-content: center;
+      padding: 15px;
       .intro_content {
-        
+        padding-right: 0;
         .intro_title {
           font-size: 32px;
           text-align: center;
@@ -519,6 +505,7 @@ body.is_black {
         }
   
         .intro_socials {
+          margin: 0;
           margin-top: 20px;
           justify-content: center;
           .social_item {

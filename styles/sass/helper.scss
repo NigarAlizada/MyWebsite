@@ -1,0 +1,42 @@
+//! Variables CSS
+$mainColor: #6500ff;
+$whiteColor: #ffffff;
+$textColor: #484848;
+$grayColor: #888888;
+$invertMainColor: #9855ff;
+$invertTextColor: #ffffff;
+$invertBgColor: #283137;
+
+//! Main Style
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+a,
+a:visited,
+a:hover {
+  text-decoration: none;
+  color:inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+body {
+  overflow-x: hidden;
+  min-height: 100vh;
+  font-family: "Montserrat", sans-serif;
+  background-color: $whiteColor;
+  transition: 0.3s;
+
+  .facts {
+    text-align: center;
+  }
+}
