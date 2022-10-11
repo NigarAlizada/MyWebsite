@@ -159,6 +159,12 @@ body .facts {
   margin-bottom: 30px;
   transition: 0.3s;
 }
+.main_container .intro_body .intro_content .about_text {
+  margin-bottom: 20px;
+}
+.main_container .intro_body .intro_content .about_text p {
+  text-align: justify;
+}
 .main_container .intro_body .intro_content .contact_btn a {
   display: inline-flex;
   background: transparent;
@@ -223,6 +229,7 @@ body .facts {
 .main_container .intro_body .about_img .img {
   display: block;
   width: 100%;
+  border-radius: 30px;
 }
 
 body.is_black {
@@ -259,6 +266,9 @@ body.is_black footer {
   color: #9855ff;
 }
 .is_black .main .main_container .intro_body .intro_content .intro_text {
+  color: #ffffff;
+}
+.is_black .main .main_container .intro_body .intro_content .about_text {
   color: #ffffff;
 }
 .is_black .main .main_container .intro_body .intro_content .contact_btn a {

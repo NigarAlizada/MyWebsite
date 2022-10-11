@@ -1,5 +1,4 @@
-@import 'helper.scss';
-
+@import "helper.scss";
 
 //! Header
 .header {
@@ -147,6 +146,12 @@
         margin-bottom: 30px;
         transition: 0.3s;
       }
+      .about_text {
+        margin-bottom:20px ;
+        p {
+          text-align: justify;
+        }
+      }
 
       .contact_btn {
         a {
@@ -223,7 +228,7 @@
       .img {
         display: block;
         width: 100%;
-       
+        border-radius: 30px;
       }
     }
   }
@@ -289,6 +294,10 @@ body.is_black {
         .intro_text {
           color: $invertTextColor;
         }
+        .about_text {
+          color: $invertTextColor;
+        }
+        
         .contact_btn {
           a {
             color: $invertMainColor;
@@ -318,7 +327,6 @@ body.is_black {
   }
 }
 
-
 //! Media Queries
 
 @media (max-width: 1023px) {
@@ -334,7 +342,7 @@ body.is_black {
           .navbar {
             .navbar_list {
               .navbar_item {
-                .navbar_link {  
+                .navbar_link {
                   font-size: 16px;
                 }
               }
@@ -344,7 +352,7 @@ body.is_black {
       }
     }
   }
-  .main_container { 
+  .main_container {
     /* margin: 0 20px; */
     .intro_body {
       padding: 30px 10px;
@@ -357,29 +365,29 @@ body.is_black {
           font-size: 18px;
           margin-bottom: 20px;
         }
-  
+
         .intro_text {
           font-size: 14px;
           margin-bottom: 20px;
         }
-  
+
         .contact_btn {
           a {
             font-size: 14px;
             padding: 12px 24px;
-  
+
             .bx {
               font-size: 20px;
             }
           }
         }
-  
+
         .intro_socials {
           margin-top: 20px;
-  
+
           .social_item {
             padding: 0 10px;
-  
+
             .social_link {
               display: flex;
               justify-content: center;
@@ -392,7 +400,7 @@ body.is_black {
               font-size: 20px;
               color: $mainColor;
               transition: 0.3s;
-  
+
               &:hover {
                 background: $mainColor;
                 color: $whiteColor;
@@ -402,11 +410,11 @@ body.is_black {
           }
         }
       }
-  
+
       .intro_img {
         max-width: 500px;
         width: 100%;
-  
+
         .img {
           display: block;
           width: 100%;
@@ -415,12 +423,9 @@ body.is_black {
       }
     }
   }
-
 }
 
-
 @media (max-width: 767px) {
-  
   .header {
     padding: 20px 0;
     .header_container {
@@ -437,23 +442,23 @@ body.is_black {
             left: 100%;
             width: 100%;
             height: calc(100vh - 69px);
-            background:rgba(255, 255, 255, 0.9);
+            background: rgba(255, 255, 255, 0.9);
             display: flex;
             justify-content: center;
             align-items: center;
-            transition: .3s;
+            transition: 0.3s;
             .navbar_list {
               flex-direction: column;
               .navbar_item {
-                 &:not(:last-child){
+                &:not(:last-child) {
                   margin-bottom: 20px;
-                 }
-                .navbar_link {  
+                }
+                .navbar_link {
                   font-size: 24px;
                 }
               }
             }
-            
+
             &.is_active {
               left: 0;
             }
@@ -466,8 +471,8 @@ body.is_black {
     }
   }
 
-  .main_container { 
-   /*  margin: 0 20px; */
+  .main_container {
+    /*  margin: 0 20px; */
     .intro_body {
       min-height: calc(100vh - 69px);
       flex-direction: column-reverse;
@@ -485,34 +490,33 @@ body.is_black {
           margin-bottom: 20px;
           text-align: center;
         }
-  
+
         .intro_text {
           font-size: 14px;
           margin-bottom: 20px;
           text-align: center;
         }
-  
+
         .contact_btn {
           text-align: center;
           a {
             font-size: 14px;
             padding: 12px 24px;
-  
+
             .bx {
               font-size: 20px;
             }
           }
         }
-  
+
         .intro_socials {
           margin: 0;
           margin-top: 20px;
           justify-content: center;
           .social_item {
             padding: 0 10px;
-            
+
             .social_link {
-              
               display: flex;
               justify-content: center;
               align-items: center;
@@ -524,7 +528,7 @@ body.is_black {
               font-size: 20px;
               color: $mainColor;
               transition: 0.3s;
-  
+
               &:hover {
                 background: $mainColor;
                 color: $whiteColor;
@@ -534,7 +538,7 @@ body.is_black {
           }
         }
       }
-  
+
       .intro_img {
         margin-bottom: 30px;
       }
@@ -544,4 +548,3 @@ body.is_black {
     background: rgba(0, 0, 0, 0.8) !important;
   }
 }
-
